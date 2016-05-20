@@ -16,8 +16,8 @@ app = Flask(__name__)
 
 @app.route("/nwi")
 def nwi():
-        r.incr("count")
-	return "GREEN APP: Visit number %d\nHostname: %s\n" % (int(r.get("count")),socket.gethostname())
+	r.incr("count")
+	return "Green Visit number %d\nHostname: %s\n" % (int(r.get("count")),socket.gethostname())
 
 if __name__ == "__main__" :
         app.run(host="0.0.0.0")
